@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IceyBites</title>
+  <link rel="stylesheet" href="prj.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+  <header class="container">
+    <nav class="navbar flex">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-ice-cream"></i>
+        IceyBites
+      </a>
+
+      <ul class="navlist flex">
+        <li><a href="#home" class="link">Home</a></li>
+        <li><a href="#shop" class="link">Shop</a></li>
+        <li><a href="#about" class="link">About</a></li>
+        <li><a href="#contact" class="link">Contact</a></li>
+        <li><a href="#login" class="link">Login</a></li>
+      </ul>
+
+      <div class="nav-icon flex">
+        <a href="#search" class="icon" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="#login" class="icon" aria-label="User Login">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="javascript:void(0)" class="icon" id="openCartBtn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="search-box" id="search">
+    <input type="text" id="searchInput" placeholder="Search your favourite ice cream...">
+    <button id="searchBtn" type="button">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="inner-hero container flex">
+        <div class="hero-me-leftimage">
+          <img src="image/ChatGPT Image Jun 11, 2026, 04_58_26 PM.png" alt="Decorative ice cream">
+        </div>
+
+        <h1>Milky Scoops</h1>
+      </div>
+
+      <div class="hero-me-image">
+        <img src="image/ChatGPT Image Jun 11, 2026, 04_14_28 PM.png" alt="Featured ice cream">
+      </div>
+    </section>
+
+    <section class="sections" id="shop">
+      <div class="container">
+        <h2>Browse Your Product</h2>
+
+        <div class="menu-tabs">
+          <button class="tab active" type="button" data-filter="all">All</button>
+          <button class="tab" type="button" data-filter="ice cream">Ice Cream</button>
+          <button class="tab" type="button" data-filter="sundae">Sundae</button>
+          <button class="tab" type="button" data-filter="shake">Shake</button>
+        </div>
+
+        <div class="card-container">
+
+          <div class="card"
+               data-category="ice cream"
+               data-name="Vanilla Berry Cone"
+               data-price="249"
+               data-desc="Premium vanilla ice cream with berry topping."
+               data-ingredients="Milk, cream, sugar, vanilla, berries"
+               data-image="image/ChatGPT Image Jun 12, 2026, 11_26_56 AM.png">
+            <div class="card-image">
+              <img src="image/ChatGPT Image Jun 12, 2026, 11_26_56 AM.png" alt="Vanilla Berry Cone">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Vanilla Berry Cone</h3>
+                <p>Premium Vanilla Ice Cream</p>
+                <span>₹249</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Vanilla Berry Cone details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="ice cream"
+               data-name="Choco Almond Cone"
+               data-price="249"
+               data-desc="Chocolate ice cream with almond crunch."
+               data-ingredients="Milk, cream, sugar, cocoa, almonds"
+               data-image="image/ChatGPT Image Jun 11, 2026, 04_14_28 PM.png">
+            <div class="card-image">
+              <img src="image/ChatGPT Image Jun 11, 2026, 04_14_28 PM.png" alt="Choco Almond Cone">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Choco Almond Cone</h3>
+                <p>Chocolate with Almond Crunch</p>
+                <span>₹249</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Choco Almond Cone details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="ice cream"
+               data-name="Blue Berry Cone"
+               data-price="249"
+               data-desc="Fresh berry flavor ice cream in a crunchy cone."
+               data-ingredients="Milk, cream, sugar, blueberry, waffle cone"
+               data-image="image/78efdb5a-8ca1-46d3-af27-73096a2c326a.png">
+            <div class="card-image">
+              <img src="image/78efdb5a-8ca1-46d3-af27-73096a2c326a.png" alt="Blue Berry Cone">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Blue Berry Cone</h3>
+                <p>Fresh Berry Flavor</p>
+                <span>₹249</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Blue Berry Cone details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="ice cream"
+               data-name="Double Pista Cone"
+               data-price="249"
+               data-desc="Nutty pista delight with creamy richness."
+               data-ingredients="Milk, cream, sugar, pista, cone"
+               data-image="image/3f602f28-109d-4a9a-99e9-32c0e26334be.png">
+            <div class="card-image">
+              <img src="image/3f602f28-109d-4a9a-99e9-32c0e26334be.png" alt="Double Pista Cone">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Double Pista Cone</h3>
+                <p>Nutty Pista Delight</p>
+                <span>₹249</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Double Pista Cone details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="sundae"
+               data-name="Strawberry Sundae"
+               data-price="299"
+               data-desc="A sweet sundae topped with strawberry sauce and cream."
+               data-ingredients="Milk, cream, strawberry sauce, cherry"
+               data-image="image/your-image-5.png">
+            <div class="card-image">
+              <img src="image/your-image-5.png" alt="Strawberry Sundae">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Strawberry Sundae</h3>
+                <p>Strawberry, cream, cherry</p>
+                <span>₹299</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Strawberry Sundae details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="sundae"
+               data-name="Chocolate Fudge Sundae"
+               data-price="329"
+               data-desc="Chocolate sauce, brownie, and creamy fudge layers."
+               data-ingredients="Milk, cream, chocolate sauce, brownie, fudge"
+               data-image="image/your-image-6.png">
+            <div class="card-image">
+              <img src="image/your-image-6.png" alt="Chocolate Fudge Sundae">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Chocolate Fudge Sundae</h3>
+                <p>Chocolate sauce and brownie</p>
+                <span>₹329</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Chocolate Fudge Sundae details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="shake"
+               data-name="Mango Shake"
+               data-price="219"
+               data-desc="Thick and creamy mango shake."
+               data-ingredients="Milk, mango pulp, sugar, ice cream"
+               data-image="image/your-image-7.png">
+            <div class="card-image">
+              <img src="image/your-image-7.png" alt="Mango Shake">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Mango Shake</h3>
+                <p>Thick and creamy mango shake</p>
+                <span>₹219</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Mango Shake details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card"
+               data-category="shake"
+               data-name="Oreo Shake"
+               data-price="239"
+               data-desc="Cold Oreo milkshake with cookie crumbs."
+               data-ingredients="Milk, Oreo biscuit, sugar, ice cream"
+               data-image="image/your-image-8.png">
+            <div class="card-image">
+              <img src="image/your-image-8.png" alt="Oreo Shake">
+            </div>
+            <div class="content flex">
+              <div>
+                <h3>Oreo Shake</h3>
+                <p>Cold Oreo milkshake</p>
+                <span>₹239</span>
+              </div>
+              <button class="icon view-btn" type="button" aria-label="View Oreo Shake details">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sections" id="about">
+      <div class="container">
+        <div class="Production">
+          <h2>IceyBites</h2>
+          <p>Our authentic and unique production, 100% healthy.</p>
+          <button class="btn" type="button">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sections" id="login">
+      <div class="container">
+        <h2>Login</h2>
+        <form class="login-form">
+          <input type="email" placeholder="Enter your email" required>
+          <input type="password" placeholder="Enter your password" required>
+          <button type="submit" class="btn">Login</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="sections" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: info@iceybites.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>IceyBites</h3>
+        <p>Premium handcrafted ice creams made with love.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: info@iceybites.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="productDialog">
+    <div class="dialog-content">
+      <button id="closeDialog" class="close-btn" type="button">&times;</button>
+      <img id="dialogImage" src="" alt="">
+      <h2 id="dialogName"></h2>
+      <p id="dialogDesc"></p>
+      <p><strong>Made of:</strong> <span id="dialogIngredients"></span></p>
+      <p><strong>Price:</strong> ₹<span id="dialogPrice"></span></p>
+
+      <div class="qty-box">
+        <button id="minusQty" type="button">-</button>
+        <span id="qtyValue">1</span>
+        <button id="plusQty" type="button">+</button>
+      </div>
+
+      <button id="addToCartBtn" class="btn" type="button">Add to Cart</button>
+    </div>
+  </dialog>
+
+  <dialog id="cartDialog">
+    <div class="dialog-content">
+      <button id="closeCartDialog" class="close-btn" type="button">&times;</button>
+      <h2>My Cart</h2>
+      <div id="cartItems"></div>
+      <p id="emptyCartMsg">Cart is empty.</p>
+      <button id="orderNowBtn" class="btn" type="button">Order Now</button>
+    </div>
+  </dialog>
+
+  <script src="prj.js"></script>
+</body>
+</html>
