@@ -22,14 +22,42 @@ const cartItems = document.getElementById("cartItems");
 const emptyCartMsg = document.getElementById("emptyCartMsg");
 const orderNowBtn = document.getElementById("orderNowBtn");
 
+<<<<<<< HEAD
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentProduct = null;
 let currentQty = 1;
+=======
+const loginDialog = document.getElementById("loginDialog");
+const closeLoginDialog = document.getElementById("closeLoginDialog");
+const cancelLoginBtn = document.getElementById("cancelLoginBtn");
+const loginForm = document.getElementById("loginForm");
+const loginNamePopup = document.getElementById("loginNamePopup");
+const userNameDisplay = document.getElementById("userNameDisplay");
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let currentProduct = null;
+let currentQty = 1;
+let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+>>>>>>> 90bbe850c458476f42a422fdcf083736f1db15a6
 
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+<<<<<<< HEAD
+=======
+function saveLoginState(name) {
+  localStorage.setItem("isLoggedIn", "true");
+  localStorage.setItem("userName", name);
+  isLoggedIn = true;
+}
+
+function updateUserName() {
+  const savedName = localStorage.getItem("userName");
+  userNameDisplay.textContent = savedName ? savedName : "Login";
+}
+
+>>>>>>> 90bbe850c458476f42a422fdcf083736f1db15a6
 function filterCards(category) {
   cards.forEach((card) => {
     const itemCategory = card.dataset.category;
@@ -132,9 +160,13 @@ closeDialog.addEventListener("click", () => {
 });
 
 productDialog.addEventListener("click", (e) => {
+<<<<<<< HEAD
   if (e.target === productDialog) {
     productDialog.close();
   }
+=======
+  if (e.target === productDialog) productDialog.close();
+>>>>>>> 90bbe850c458476f42a422fdcf083736f1db15a6
 });
 
 plusQty.addEventListener("click", () => {
@@ -150,6 +182,15 @@ minusQty.addEventListener("click", () => {
 });
 
 addToCartBtn.addEventListener("click", () => {
+<<<<<<< HEAD
+=======
+  if (!isLoggedIn) {
+    productDialog.close();
+    loginDialog.showModal();
+    return;
+  }
+
+>>>>>>> 90bbe850c458476f42a422fdcf083736f1db15a6
   const existingItem = cart.find((item) => item.name === currentProduct.name);
 
   if (existingItem) {
@@ -176,9 +217,13 @@ closeCartDialog.addEventListener("click", () => {
 });
 
 cartDialog.addEventListener("click", (e) => {
+<<<<<<< HEAD
   if (e.target === cartDialog) {
     cartDialog.close();
   }
+=======
+  if (e.target === cartDialog) cartDialog.close();
+>>>>>>> 90bbe850c458476f42a422fdcf083736f1db15a6
 });
 
 orderNowBtn.addEventListener("click", () => {
@@ -188,4 +233,36 @@ orderNowBtn.addEventListener("click", () => {
   renderCart();
 });
 
+<<<<<<< HEAD
+=======
+closeLoginDialog.addEventListener("click", () => {
+  loginDialog.close();
+});
+
+cancelLoginBtn.addEventListener("click", () => {
+  loginDialog.close();
+});
+
+loginDialog.addEventListener("click", (e) => {
+  if (e.target === loginDialog) loginDialog.close();
+});
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = loginNamePopup.value.trim();
+  saveLoginState(name);
+  updateUserName();
+  loginDialog.close();
+  alert("Signed in successfully.");
+});
+
+updateUserName();
+
+window.addEventListener("load", () => {
+  if (!isLoggedIn) {
+    loginDialog.showModal();
+  }
+});
+
+>>>>>>> 90bbe850c458476f42a422fdcf083736f1db15a6
 filterCards("all");
